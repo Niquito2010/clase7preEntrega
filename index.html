@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- CSS de Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Trispace:wght@300;400;600&display=swap");
+
+            :root {
+                --bs-body-font-family: "Trispace", sans-serif;
+                --bs-body-color: #eef;
+                --bs-body-bg: #10121c;
+            }
+        </style>
+        <title>Introducción al Desarrollo Front End con HTML, CSS y JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row pt-5">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+                        <h1 class="display-4 text-center py-2">Dragon Ball Z</h1>
+                        <p class="lead">
+                            Dragon Ball nos cuenta la vida de Son Goku, un niño inspirado en la leyenda china del rey mono que tiene cola de simio, una nube voladora y un bastón mágico y que acompaña a Bulma por el mundo en busca de las
+                            Bolas de Dragón: siete esferas capaces de conceder cualquier deseo al juntarlas e invocar al dragón Shenlong. Durante este viaje irá mejorando sus habilidades como luchador y conocerá a los personajes que le
+                            acompañarán durante la mayor parte de la serie: Krilin, Yamcha, Ten Shin Han, Muten Roshi o Piccolo.
+                        </p>
+                        <p>
+                            Esta primera parte de la serie se caracterizó por ser muy cómica y desenfadada, objetivo inicial con el que Toriyama crearía Dragon Ball, aunque más tarde diera un giro radical en este sentido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="accordion mx-md-5 my-5 rounded-0" id="accordionExample">
+                <!--Gráfico de poder-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header bg-dark" id="headingOne">
+                        <button class="accordion-button rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Poder de los personajes</button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>
+                                En este gráfico se muestran los distintos tipos de poder que tienen los guerreros Z.
+                            </p>
+                            <div class="col-md-6 mx-auto mb-3">
+                                <canvas id="primerchart" width="100" height="100"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Razas de personajes-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Razas de personajes</button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>Aquí se encuentran graficados los distintos tipos de razas de los personajes.</p>
+                            <div class="col-md-6 mx-auto mb-3">
+                                <canvas id="segundochart" width="100" height="100"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Sexo de personajes-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Sexo de personajes</button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>
+                                Gráfico simple que muestra el sexo de los personajes de Dragon ball Z.
+                            </p>
+                            <div class="col-md-6 mx-auto mb-3">
+                                <canvas id="tercerchart" width="100" height="100"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Guerreros mas poderosos-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Guerreros mas poderosos</button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>
+                                Este Gráfico muestra el nivel de poder de los distintos luchadores.
+                            </p>
+                            <canvas id="cuartochart" width="100" height="30"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--Restauración de vida-->
+                <div class="accordion-item rounded-0">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Restauración de vida</button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black-50">
+                            <p>No alcance profe hice lo que pude.</p>
+                            <canvas id="quintochart" width="100" height="30"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin-->
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+                    <p>
+                        "Dragon Ball”, el manga escrito e ilustrado por Akira Toriyama, ha deleitado por más de tres décadas a un público no solo infantil, sino también juvenil y adulto, que se quedó enganchado con las aventuras de Gokú, un
+                        guerrero saiyajin, cuyo fin -casi una obsesión- es proteger a la Tierra de otros seres que quieren conquistarla y exterminar a la humanidad.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mx-auto small text-center">
+                        <p>Fuentes: <a href="https://www.muyinteresante.es/muy-gamer/articulo/historia-de-dragon-ball-el-super-saiyan-legendario-191540891034">La historia de Dragon Ball Z</a></p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col"><p class="text-muted mt-5 text-center small">Bootstrap v5.1 y Charts.js</p></div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Biblioteca de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- Biblioteca Chart.js -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+            integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- Un gran script, que contiene una función asincrónica para ir a buscar un JSON con -->
+        <script>
+            async function todo() {
+                //el fetch
+                const consulta = await fetch("https://raw.githubusercontent.com/Niquito2010/DatosJson/main/Datos.json");
+                const data = await consulta.json();
+                console.log(data.characters);
+
+                let characters = data.characters;
+
+                // Primer chart - poderes
+                let poderes_dataset = [];
+                let maximo_personajes = 0;
+
+                // Segundo chart - razas
+                let razas = {
+                    Saiyan: 0,
+                    "Human/Saiyan": 0,
+                    Unknown: 0,
+                    Android: 0,
+                    Majin: 0,
+                    God: 0,
+                    Nameikan: 0,
+                    Human: 0,
+                };
+
+                razas_colores = [];
+                for (let i = 0; i < 8; i++) {
+                    let r = Math.round(Math.random() * 255);
+                    let b = Math.round(Math.random() * 255);
+                    let g = Math.round(Math.random() * 255);
+                    razas_colores.push(`rgba(${r}, ${g}, ${b})`);
+                }
+
+                // tercer chart - sexo de los personajes
+                var mujeres = 0;
+                var hombres = 0;
+
+                // Cuarto chart - guerreros más poderosos
+                let guerreros_nombre = [];
+                let guerreros_poder = [];
+
+                characters.forEach((d) => {
+                    // poderes
+                    if (maximo_personajes < 25) {
+                        let r = Math.round(Math.random() * 255);
+                        let b = Math.round(Math.random() * 255);
+                        let g = Math.round(Math.random() * 255);
+
+                        poderes = {
+                            label: d.name,
+                            data: [parseInt(d.health), parseInt(d.attack), parseInt(d.defense)],
+                            backgroundColor: `rgba(${r}, ${g}, ${b}, 0.3)`,
+                            borderColor: `rgba(${r}, ${g}, ${b})`,
+                        };
+
+                        maximo_personajes++;
+
+                        poderes_dataset.push(poderes);
+                    }
+
+                    //razas
+                    razas[d.race] = razas[d.race] + 1;
+
+                    //separo sexos
+                    if (d.gender == "Female") {
+                        mujeres = mujeres + 1;
+                    } else {
+                        hombres = hombres + 1;
+                    }
+
+                    // guerreros más poderosos
+                    guerreros_nombre.push(d.name);
+                    guerreros_poder.push(parseInt(d.attack));
+                });
+
+                // Poderes
+                new Chart(document.getElementById("primerchart").getContext("2d"), {
+                    type: "radar",
+                    data: {
+                        labels: ["Vida", "Ataque", "Defensa"],
+                        datasets: poderes_dataset,
+                    },
+                    plugins: {
+                        filler: {
+                            propagate: false,
+                        },
+                        "samples-filler-analyser": {
+                            target: "chart-analyser",
+                        },
+                    },
+                    interaction: {
+                        intersect: false,
+                    },
+                });
+
+                // razas
+                new Chart(document.getElementById("segundochart").getContext("2d"), {
+                    type: "doughnut",
+                    data: {
+                        labels: Object.keys(razas),
+                        datasets: [
+                            {
+                                data: Object.values(razas),
+                                label: "Razas",
+                                backgroundColor: razas_colores,
+                            },
+                        ],
+                    },
+                    options: {
+                        animation: false,
+                        layout: {
+                            padding: 10,
+                        },
+                    },
+                });
+
+                // sexo de personajes
+                new Chart(document.getElementById("tercerchart").getContext("2d"), {
+                    type: "pie",
+                    data: {
+                        labels: ["Mujeres", "Hombres"],
+                        datasets: [{ data: [mujeres, hombres], label: "Sexo", backgroundColor: ["#F6A71D", "#1D51F6"] }],
+                    },
+                    options: {
+                        animation: false,
+                        layout: {
+                            padding: 10,
+                        },
+                    },
+                });
+
+                // guerreros más poderosos
+                new Chart(document.getElementById("cuartochart").getContext("2d"), {
+                    type: "bar",
+                    data: {
+                        labels: guerreros_nombre,
+                        datasets: [{ data: guerreros_poder, label: "Ataque", backgroundColor: ["#F6A71D"] }],
+                    },
+                    options: {
+                        indexAxis: "y",
+                        animation: false,
+                        layout: {
+                            padding: 40,
+                        },
+                    },
+                });
+            }
+            todo().catch((error) => console.error(error));
+        </script>
+    </body>
+</html>
