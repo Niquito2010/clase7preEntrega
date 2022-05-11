@@ -239,7 +239,7 @@
       "img": "assets/tien.png"
     },
     {
-      "id": "android 17",
+      "id": "android17",
       "name": "Android 17",
       "race": "Android",
       "gender": "Male",
@@ -256,7 +256,7 @@
       "img": "assets/android17.png"
     },
     {
-      "id": "android 18",
+      "id": "android18",
       "name": "Android 18",
       "race": "Android",
       "gender": "Female",
@@ -324,7 +324,7 @@
       "img": "assets/gogeta.png"
     },
     {
-      "id": "goku black",
+      "id": "gokublack",
       "name": "Goku Black",
       "race": "Saiyan",
       "gender": "Male",
